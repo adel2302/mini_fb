@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <div class="row">
+      <div class="small-8 large-offset-2 large-8 columns">
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
            <% if user_signed_in? %>
@@ -21,6 +23,8 @@
                <%= link_to 'Sign up', new_user_registration_path %>
                <%= link_to 'Sign in', new_user_session_path %>
            <% end %>
+         </div>
+    </div>
     <%= yield %>
 
   </body>
