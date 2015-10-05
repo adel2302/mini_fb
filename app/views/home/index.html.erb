@@ -1,7 +1,9 @@
-<div class="row">
-  <div class="small-8 large-offset-2 large-8 columns">
-    <h1>Home#index</h1>
-    <p>Find me in app/views/home/index.html.erb</p>
-    <%= current_user.name %>
-  </div>
-</div>
+<h1>Mini Facebook</h1>
+ <h3>Liste des inscrits</h3>
+   <% @users.each do |user| %>
+    <p><%= user.name %></p>
+   <% end %>
+<%= form_tag "/result", method: :post  do %>
+  <%= text_field_tag "query" %>
+  <%= submit_tag "Search" %>
+<% end %>
