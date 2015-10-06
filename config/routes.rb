@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'home#index'
   post 'result' => 'home#search'
   get 'show/:id' => 'home#show'
-  post 'show/id' => 'home#create'
+  post 'show/:id' => 'home#create'
+  get 'show/:id' => 'home#index'
+  delete 'show/:id' => 'home#destroy_friend'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,8 @@
 <%= @user.name %>
 <%= form_tag "/show/#{@user.id}", method: :post do %>
 	<input type="submit" value="Ajouter en ami">
-<% end %>
+<% end %> 
+   <%= form_tag "/show/#{@user.id}", method: "delete" do %>
+        <input type= 'submit' value='Supprimer' >
+    <% end %>
+<a href="/">Retour</a>

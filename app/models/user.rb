@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
                             foreign_key: "user_a_id"
   has_many :received_messages, class_name: "Message",
                                foreign_key: "user_b_id"
-  has_many :friends
+  has_many :friends, foreign_key: "user_a_id"
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -17,3 +17,4 @@ class User < ActiveRecord::Base
         end
     end 
 end
+ 

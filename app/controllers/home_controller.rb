@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	autocomplete :user, :name
-  
+
   def index
   	@users = User.all
   	@messages = Message.all
@@ -16,6 +16,13 @@ class HomeController < ApplicationController
   end
 
   def create
-  
+     Friend.create user_a_id: current_user.id, user_b_id: params[:id]
+      redirect_to "/"
   end
+
+  def destroy_friend
+    Friend.find(params[:id]).destroy
+    redirect_to "/"
+  end
+  
 end

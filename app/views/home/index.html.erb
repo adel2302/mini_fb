@@ -1,5 +1,10 @@
 <h1>Mini Facebook</h1>
+<h3>Hello <%= current_user.name %></h3>
 <%= form_tag "/result", method: :post  do %>
   <%= autocomplete_field_tag "query",  params[:query],autocomplete_user_name_home_index_path, :size => 10 %>
   <%= submit_tag "Search" %>
+<% end %>
+<h3>Amis</h3>
+<% current_user.friends.each do |friend| %>
+ <p><a href="/show/<%= friend.id %>"><%= friend.id %></a></p>
 <% end %>
