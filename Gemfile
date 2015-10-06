@@ -45,3 +45,6 @@ end
   gem 'devise'
 #
   gem 'foundation-rails'
+  gem 'jquery-ui-rails'
+  gem 'rails4-autocomplete'
+

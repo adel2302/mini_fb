@@ -1,0 +1,4 @@
+<%= @user.name %>
+<%= form_tag "/show/#{@user.id}", method: :post do %>
+	<input type="submit" value="Ajouter en ami">
+<% end %>
