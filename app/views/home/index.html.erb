@@ -3,7 +3,3 @@
   <%= autocomplete_field_tag "query",  params[:query],autocomplete_user_name_home_index_path, :size => 10 %>
   <%= submit_tag "Search" %>
 <% end %>
- <h3>Liste des inscrits</h3>
-   <% @users.each do |user| %>
-    <p><a href="/show/<%= user.id %>"><%= user.name %></a></p>
-   <% end %>
