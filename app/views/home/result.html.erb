@@ -1,5 +1,9 @@
-<h1>Resultat</h1>
-<% @users.each do |user| %>
-  <p><a href="/show/<%= user.id %>"><%= user.name %></a></p>
-<% end %>
-<a href="/">Retour</a>
+<div class="row">
+  <div class="small-3 large-offset-1 large-3 columns">
+    <h1>Resultat</h1>
+      <% @users.each do |user| %>
+        <p ><a href="/show/<%= user.id %>" class="button tiny" ><%= user.name %></a></p>
+      <% end %>
+    <a href="/">Retour</a>
+  </div>
+</div>

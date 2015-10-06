@@ -1,9 +1,14 @@
-<h1>Mini Facebook</h1>
+
+<div class="row">
+  <div class="small-8 large-offset-2 large-8 columns">
+  <h1 style="text-align:center; background-color:red; border-radius:10px">Mini Facebook </h1>
 <h3>Hello <%= current_user.name %></h3>
 <%= form_tag "/result", method: :post  do %>
   <%= autocomplete_field_tag "query",  params[:query],autocomplete_user_name_home_index_path, :size => 10 %>
-  <%= submit_tag "Search" %>
+  <%= submit_tag "Search" class:"button radius"%>
 <% end %>
+</div>
+</div>
 <h3>Amis</h3>
 <% current_user.friends.each do |friend| %>
  <p><a href="/show/<%= friend.id %>"><%= friend.id %></a></p>
